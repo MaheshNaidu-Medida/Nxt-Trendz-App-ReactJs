@@ -124,10 +124,23 @@ class ProductItemDetails extends Component {
           rating,
           title,
           totalReviews,
+          id,
         } = productData
-        const {addCartItem} = value
+        const {addCartItem, incrementCartItemQuantity, cartList} = value
+
         const onClickAddToCart = () => {
-          addCartItem({...productData, quantity})
+          const itemInCart = cartList.find(each => {
+            if (each.id === id) {
+              return each
+            }
+            return null
+          })
+
+          if (itemInCart === null || itemInCart === undefined) {
+            addCartItem({...productData, quantity})
+          } else {
+            incrementCartItemQuantity(id)
+          }
         }
 
         return (

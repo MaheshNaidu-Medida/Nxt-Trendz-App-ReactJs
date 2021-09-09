@@ -120,7 +120,7 @@
   }
 }
 
-.remove-button {
+.remove-button-small {
   background-color: transparent;
   color: #334155;
   font-family: 'Roboto';
@@ -132,12 +132,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .remove-button {
+  .remove-button-small {
     display: none;
   }
 }
 
-.remove-button {
+.remove-button-large {
   background-color: transparent;
   border: none;
   outline: none;
@@ -146,7 +146,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .remove-button {
+  .remove-button-large {
     display: none;
   }
 }
